@@ -34,7 +34,7 @@ def valid_move?(board, index)
   index = index.to_i
   if index < 0 || index > 8  || board[index] != "X" || board[index] != "O"
     return false
-  elsif board[index] == " " || board[index] == "" || board[index] == nil
+  elsif board[index] == " " || board[index] == "" || board[index] == nil || index > 0 && index < 8
     return true
   end
 
