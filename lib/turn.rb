@@ -18,15 +18,22 @@ def move(board, index, move = "X")
   display_board(board)
 end
 
+def position_taken?(board,index)
+  if board[index] == nil || board[index] == ""
+    return true
+  end
+  index = index.to_i
+  if board[index] != " "
+    return false
+  else
+    return true
+  end
+end
+
 def valid_move?(board, index)
   index = index.to_i
-  if board[index] == nil || board[index] == ""
+  if index < 0 || index > 8 || board[index] || position_taken?(board,index) == false
     return false
-  end
-  if index < 0 || index > 8 || board[index] != " "
-    return false
-  elsif board[index] == " "
-    return true
   else
     return true
   end
