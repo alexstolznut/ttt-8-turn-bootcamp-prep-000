@@ -50,9 +50,10 @@ def turn(board)
   puts "Please enter 1-9:"
   index = gets.strip
   index = input_to_index(index)
-  if !valid_move?(board,index)
+  valid = valid_move?(board, index)
+  if !valid
     puts "Please enter 1-9:"
-  elsif valid_move?(board,index)
+  elsif valid
     move(board, index)
     display_board(board)
   end
