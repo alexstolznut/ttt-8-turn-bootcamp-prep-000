@@ -34,7 +34,7 @@ def valid_move?(board, index)
   index = index.to_i
   if index >=0 && index <=8 || board[index] == " "
     return true
-  else
+  elsif board[index] != " "
     return false
   end
 
