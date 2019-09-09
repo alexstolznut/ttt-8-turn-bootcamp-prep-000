@@ -31,7 +31,7 @@ def position_taken?(board,index)
 end
 
 def valid_move?(board, index)
-  index = index.to_i
+  index = index.to_i - 1
   if index < 0 || index > 8 || board[index] == "X" || board[index] == "O" || index ==  " " || index == nil || index == ""
     return false
   elsif index >=0 && index <=8 || board[index] == " "
