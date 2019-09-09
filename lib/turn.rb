@@ -38,12 +38,6 @@ def valid_move?(board, index)
     return true
   end
 
-
-  # if board[index] != " "
-  #   return false
-  # else
-  #   return true
-  # end
 end
 
 def turn(board)
